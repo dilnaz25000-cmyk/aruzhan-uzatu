@@ -120,6 +120,11 @@ const musicToggle = document.getElementById('musicToggle');
 const bgMusic = document.getElementById('bgMusic');
 let isFirstPlay = true;
 
+// Force 8 seconds on metadata load as a fallback
+bgMusic.addEventListener('loadedmetadata', () => {
+  if (isFirstPlay) bgMusic.currentTime = 8;
+});
+
 musicToggle.addEventListener('click', () => {
   if (bgMusic.paused) {
     if (isFirstPlay) {
