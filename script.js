@@ -5,8 +5,8 @@
 
 /* ── CONFIG — WhatsApp нөмірін осында өзгертіңіз ── */
 const WA_NUMBER = '77007251149';   // Format: 77001234567 мен басталатын цифрлар
-var WA_YES = 'Сәлеметсіздер ме! Аружанның қыз ұзату тойына *келемін* 🌹 Мені тізімге қосыңыз!';
-var WA_NO  = 'Сәлеметсіздер ме! Өкінішке орай Аружанның қыз ұзату тойына *келе алмаймын* 🙏 Жолдарыңыз болсын!';
+var WA_YES = 'Сәлеметсіз бе! Аружанның қыз ұзату тойына келемін\nМені тізімге қосыңыз!';
+var WA_NO  = 'Сәлеметсіз бе! Аружанның қыз ұзату тойына келе алмаймын';
 
 /* ── WHATSAPP ── */
 function sendWA(type) {
@@ -115,12 +115,17 @@ function sendWA(type) {
   allSections.forEach(function(el) { io.observe(el); });
 })();
 
-// -- Music Player --
+// ── Music Player ──
 const musicToggle = document.getElementById('musicToggle');
 const bgMusic = document.getElementById('bgMusic');
+let isFirstPlay = true;
 
 musicToggle.addEventListener('click', () => {
   if (bgMusic.paused) {
+    if (isFirstPlay) {
+      bgMusic.currentTime = 8;
+      isFirstPlay = false;
+    }
     bgMusic.play().then(() => {
       musicToggle.classList.add('playing');
     }).catch(e => console.log('Audio play failed:', e));
