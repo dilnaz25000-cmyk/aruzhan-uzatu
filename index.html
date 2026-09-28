@@ -1,264 +1,763 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Аружан — Қыз Ұзату Тойы • 24.10.2026</title>
-  <meta name="description" content="Аружанның қыз ұзату тойына шақыру. 24 қазан 2026, Ақ Отау мейрамханасы, Қызылорда." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Үйлену тойға шақыру - Икрам & Аружан</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Cormorant';
+            src: url('Cormorant-Medium.ttf') format('truetype');
+        }
+        :root {
+            --gold: #b29364;
+            --text-dark: #333333;
+            --bg-light: #fbfbfb;
+            --font-cursive: 'Great Vibes', cursive;
+            --font-serif: 'Cormorant', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
 
-  <!-- Fonts: Marck Script = Cyrillic script, Montserrat = caps body -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600;1,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px; /* Mobile width */
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 40px 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('wedding_hands_hero_1790569057671.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.85;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding-top: 50px;
+        }
+
+        .names-cursive {
+            font-family: var(--font-cursive);
+            font-size: 4rem;
+            color: var(--gold);
+            line-height: 1;
+            text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+        }
+
+        .names-cursive .ampersand {
+            font-size: 3rem;
+            display: block;
+            margin: -10px 0;
+        }
+
+        .music-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            z-index: 10;
+            font-size: 0.6rem;
+            text-align: center;
+            line-height: 1.1;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        }
+
+        .music-btn svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 2px;
+            fill: white;
+        }
+
+        .scroll-down {
+            position: relative;
+            z-index: 2;
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-down::before {
+            content: '●';
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* Section common */
+        section {
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .heart-divider {
+            margin: 15px auto;
+            text-align: center;
+        }
+
+        .ornament-wrapper {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .ornament-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        h2 {
+            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .intro-text {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            margin-bottom: 30px;
+        }
+
+        .names-block {
+            margin: 20px 0;
+        }
+
+        .names-block .name {
+            font-family: var(--font-cursive);
+            font-size: 3.5rem;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+        
+        .names-block .connector {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        /* Calendar Section */
+        .date-display {
+            font-family: var(--font-sans);
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            margin: 20px 0 30px;
+        }
+
+        .calendar {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .day-name {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .day {
+            padding: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .day.highlight {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .day.highlight::before {
+            content: '♡';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.2rem;
+            color: var(--gold);
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .time-section {
+            font-family: var(--font-sans);
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Countdown */
+        .countdown-section {
+            background-color: var(--gold);
+            color: white;
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .countdown-title {
+            font-family: var(--font-cursive);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .timer-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timer-circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-family: var(--font-sans);
+            margin-bottom: 8px;
+        }
+
+        .timer-label {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Form Section */
+        .rsvp-form {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--gold);
+        }
+
+        .radio-group {
+            margin-top: 15px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .radio-label input {
+            display: none;
+        }
+
+        .custom-radio {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #999;
+            border-radius: 50%;
+            margin-right: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .radio-label input:checked + .custom-radio {
+            border-color: var(--gold);
+        }
+
+        .radio-label input:checked + .custom-radio::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background-color: var(--gold);
+            border-radius: 50%;
+        }
+
+        .counter-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .counter-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: transparent;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        .counter-val {
+            width: 60px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Floating Music Toggle -->
-  <div class="music-toggle" id="musicToggle">
-    <svg class="music-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-      <path d="M12 3V13.55C11.4116 13.2045 10.7303 13 10 13C7.79086 13 6 14.7909 6 17C6 19.2091 7.79086 21 10 21C12.2091 21 14 19.2091 14 17V7H18V3H12Z"/>
-    </svg>
-  </div>
-  <audio id="bgMusic" loop>
-    <source src="dimash-qudaibergen-qarlygashym-uya-salganda.mp3#t=8" type="audio/mpeg">
-  </audio>
-
-<!-- ══════════════════════════════════
-     HERO — Burgundy + Oval Photo
-══════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-name">Аружан</div>
-  <div class="hero-sub">ҚЫЗ ҰЗАТУ ТОЙЫ</div>
-
-  <div class="oval-wrap hero-oval">
-    <div class="oval-frame">
-      <img src="WhatsApp Image 2026-09-11 at 10.08.29.jpeg" alt="Аружан" />
-    </div>
-    <span class="odeco l">◆</span>
-    <span class="odeco r">◆</span>
-  </div>
-
-  <div class="marquee-bar">
-    <div class="marquee-track">
-      <span>ТОЙ ШАҚЫРУЫ ♥ ҚЫЗ ҰЗАТУ ТОЙЫНА ШАҚЫРУ ♥ ТОЙ ШАҚЫРУЫ ♥ ҚЫЗ ҰЗАТУ ТОЙЫНА ШАҚЫРУ ♥ &nbsp;</span>
-      <span>ТОЙ ШАҚЫРУЫ ♥ ҚЫЗ ҰЗАТУ ТОЙЫНА ШАҚЫРУ ♥ ТОЙ ШАҚЫРУЫ ♥ ҚЫЗ ҰЗАТУ ТОЙЫНА ШАҚЫРУ ♥ &nbsp;</span>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     INVITE — White Background
-══════════════════════════════════ -->
-<section class="invite-sec">
-  <h2 class="script-title burg-clr">Құрметті</h2>
-  <p class="caps-body">
-    АҒАЙЫН-ТУЫС, БАУЫРЛАР,<br>
-    ҚҰДА-ЖЕКЖАТ,<br>
-    НАҒАШЫ-ЖИЕН, БӨЛЕЛЕР,<br>
-    ҚҰРБЫ-ҚҰРДАС,<br>
-    ДОС-ЖАРАН, КӨРШІЛЕР<br>
-    МЕН ӨРІПТЕСТЕР!
-  </p>
-  <p class="caps-body mid-text">
-    СІЗДЕРДІ<br>АЯУЛЫ ҚЫЗЫМЫЗ
-  </p>
-  <h2 class="script-title burg-clr bride-name">Аружанның</h2>
-  <p class="caps-body mid-text">
-    ҰЗАТУ ТОЙЫНА АРНАЛҒАН<br>
-    САЛТАНАТТЫ<br>
-    ДАСТАРХАНЫМЫЗДЫҢ<br>
-    ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА<br>
-    ШАҚЫРАМЫЗ!
-  </p>
-
-  <!-- Bottom torn wave (decorative) -->
-  <div class="torn-bottom">
-    <svg viewBox="0 0 430 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 L0,35 C25,52 50,18 75,35 C100,52 125,16 150,35 C175,52 200,16 225,35 C250,52 275,18 300,35 C325,52 350,16 375,35 C400,52 415,44 430,38 L430,0 Z" fill="#6B1020"/>
-    </svg>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     SCHEDULE — White + S-Curve
-══════════════════════════════════ -->
-<section class="schedule-sec">
-  <div class="sch-header">
-    <span class="sch-hearts">♥ ♥ ♥</span>
-    <h2 class="script-title burg-clr">Той бағдарламасы:</h2>
-  </div>
-
-  <div class="sch-body">
-    <!-- S-curve SVG -->
-    <svg class="s-curve" viewBox="0 0 80 380" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M55,0 C55,55 18,75 18,145 C18,215 55,235 55,295 C55,355 18,370 18,380"
-            stroke="#C8C8C8" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <!-- Қара түсті дәл алтын түске айналдыратын фильтр -->
+    <svg width="0" height="0" style="position: absolute;">
+      <filter id="colorize-gold">
+        <feColorMatrix type="matrix" values="
+          0.302 0 0 0 0.698
+          0 0.424 0 0 0.576
+          0 0 0.608 0 0.392
+          0 0 0 1 0" />
+      </filter>
     </svg>
 
-    <!-- Time items: right → left → right -->
-    <div class="sch-items">
+    <div class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="music-btn" id="musicToggle" style="cursor: pointer; animation-play-state: paused;">
+                <div style="display:flex; flex-direction:column; align-items:center;">
+                    <svg viewBox="0 0 24 24"><path d="M9 18q-1.25 0-2.125-.875T6 15q0-1.25.875-2.125T9 12q1.25 0 2.125.875T12 15v-7h4v3h-2v7q0 1.25-.875 2.125T9 18Z"/></svg>
+                </div>
+            </div>
+            <audio id="bgMusic" loop>
+                <source src="Maher Zain For The Rest Of My Life.mp3" type="audio/mpeg">
+            </audio>
+            
+            <div class="hero-content">
+                <div class="names-cursive">
+                    Икрам
+                    <span class="ampersand">&</span>
+                    Аружан
+                </div>
+            </div>
+            
+            <div class="scroll-down">
+                Жоғары жылжытыңыз
+            </div>
+        </section>
 
-      <div class="sch-item sch-right">
-        <div class="sch-time">12:00</div>
-        <div class="sch-lbl">ҚОНАҚТАРДЫҢ<br>ЖИНАЛУЫ</div>
-      </div>
+        <!-- Intro Section -->
+        <section>
+            <div style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--gold); line-height: 1.5; margin-bottom: 30px; font-style: italic;">
+                Ғашықтың тілі - тілсіз тіл,<br>
+                көзбен көр де ішпен біл!<br>
+                <div style="text-align: right; font-size: 1.5rem; margin-top: 10px; margin-right: 20px;">А. Құнанбайұлы</div>
+            </div>
 
-      <div class="sch-item sch-left">
-        <div class="sch-time italic-t">13:00</div>
-        <div class="sch-lbl">ТОЙДЫҢ<br>БАСТАЛУЫ</div>
-      </div>
+            <div class="heart-divider">
+                <div class="ornament-wrapper">
+                    <img src="ornament.png" alt="Орнамент" class="ornament-img">
+                </div>
+            </div>
+            
 
-      <div class="sch-item sch-right">
-        <div class="sch-time">17:00</div>
-        <div class="sch-lbl">ҰЗАТУ<br>РӘСІМІ</div>
-      </div>
+            <p class="intro-text" style="font-size: 1.05rem; margin-top: 30px;">
+                Құрметті ағайын-туыс, бауырлар,<br>
+                құда-жекжат, дос-жарандар,<br>
+                нағашы-жиен, бөлелер,<br>
+                әпке-жезделер, сыныптастар,<br>
+                әріптестер және көршілер!
+            </p>
+            
+            <p class="intro-text" style="font-size: 1rem; margin-bottom: 10px; text-transform: uppercase;">
+                СІЗДЕРДІ ҰЛЫМЫЗ
+            </p>
+            
+            <div class="names-block">
+                <div class="name">Икрам</div>
+                <div class="connector">МЕН</div>
+                <div class="name">Аружан</div>
+            </div>
+            
+            <p class="intro-text" style="text-transform: uppercase;">
+                КЕЛІНІМІЗДІҢ ҮЙЛЕНУ<br>
+                ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ<br>
+                АҚ ДАСТАРХАНЫМЫЗДЫҢ<br>
+                ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА<br>
+                ШАҚЫРАМЫЗ!
+            </p>
+        </section>
+
+        <!-- Hosts Section -->
+        <section style="padding-top: 0;">
+            <h2>ТОЙ ИЕЛЕРІ:</h2>
+            <div style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold); line-height: 1.2; margin-top: 20px;">
+                Ұлболсын<br>Ислам - Роза
+            </div>
+        </section>
+
+        <!-- Date & Calendar Section -->
+        <section>
+            <div class="heart-divider">
+                <div class="ornament-wrapper">
+                    <img src="ornament.png" alt="Орнамент" class="ornament-img">
+                </div>
+            </div>
+            
+            <div class="names-cursive" style="font-size: 3rem; margin-top: 20px;">
+                Той салтанаты:
+            </div>
+            
+            <div class="date-display">
+                26 ҚАЗАН 2026Ж.
+            </div>
+            
+            <div class="calendar">
+                <div class="calendar-header">
+                    <span>ҚАЗАН</span>
+                    <span>2026</span>
+                </div>
+                
+                <div class="calendar-grid day-name">
+                    <div>ДҮ</div><div>СЕ</div><div>СӘ</div><div>БЕ</div><div>ЖҰ</div><div>СЕ</div><div>ЖЕ</div>
+                </div>
+                <div class="calendar-grid">
+                    <div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div>
+                    <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+                    <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+                    <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
+                    <div class="day highlight">26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div></div>
+                </div>
+            </div>
+            
+            <h2 style="margin-top: 50px;">БАСТАЛУ УАҚЫТЫ:</h2>
+            <div class="time-section">19:00</div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <div class="countdown-title">Той салтанатына дейін:</div>
+            
+            <div class="timer-grid" id="countdown">
+                <div class="timer-box">
+                    <div class="timer-circle" id="days">00</div>
+                    <div class="timer-label">Күн</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-circle" id="hours">00</div>
+                    <div class="timer-label">Сағат</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-circle" id="minutes">00</div>
+                    <div class="timer-label">Минут</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-circle" id="seconds">00</div>
+                    <div class="timer-label">Секунд</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section>
+            <h2>МЕКЕН-ЖАЙЫМЫЗ:</h2>
+            <div style="width: 50px; height: 1px; background-color: var(--text-dark); margin: 20px auto;"></div>
+            
+            <p class="intro-text" style="font-size: 1.1rem; text-transform: uppercase;">
+                ҚЫЗЫЛОРДА ОБЛЫСЫ,<br>
+                ЖАҢАҚОРҒАН АУДАНЫ,<br>
+                "ЕРНҰР" МЕЙРАМХАНАСЫ,<br>
+                МҰСАХАНОВ КӨШЕСІ, 3В
+            </p>
+            
+
+        </section>
+
+        <!-- RSVP Section -->
+        <section>
+            <div class="heart-divider">
+                <div class="ornament-wrapper">
+                    <img src="ornament.png" alt="Орнамент" class="ornament-img">
+                </div>
+            </div>
+            
+            <h2 style="font-size: 1.4rem; margin-bottom: 30px;">ТОЙҒА ҚАТЫСУЫҢЫЗДЫ<br>РАСТАУЫҢЫЗДЫ СҰРАЙМЫЗ:</h2>
+            
+            <div class="rsvp-form">
+                <div class="form-group">
+                    <input type="text" id="guestName" class="form-control" placeholder="АТЫ-ЖӨНІҢІЗ">
+                </div>
+                
+                <p style="font-size: 0.8rem; color: #666; margin-bottom: 10px; font-family: var(--font-sans);">
+                    ЖҰБАЙЫҢЫЗБЕН КЕЛСЕҢІЗ, ЕСІМДЕРІҢІЗДІ<br>БІРГЕ ЖАЗА КЕТІҢІЗ
+                </p>
+                
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="yes" checked>
+                        <span class="custom-radio"></span>
+                        КЕЛЕМІН
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="with_spouse">
+                        <span class="custom-radio"></span>
+                        ЖҰБАЙЫММЕН КЕЛЕМІН
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="no">
+                        <span class="custom-radio"></span>
+                        КЕЛЕ АЛМАЙМЫН
+                    </label>
+                </div>
+                
+                <div class="form-group" style="margin-top: 25px;">
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">НЕШЕ АДАМ БОЛЫП КЕЛЕСІЗДЕР?</p>
+                    <div class="counter-group">
+                        <button type="button" class="counter-btn" onclick="updateCount(-1)">−</button>
+                        <div class="counter-val" id="guestCount">1</div>
+                        <button type="button" class="counter-btn" onclick="updateCount(1)">+</button>
+                    </div>
+                </div>
+                
+                <button type="button" class="submit-btn" onclick="sendToWhatsApp()">ЖАУАПТЫ ЖІБЕРУ</button>
+            </div>
+        </section>
 
     </div>
-  </div>
-</section>
 
+    <script>
+        // Countdown Timer
+        const targetDate = new Date("October 26, 2026 19:00:00").getTime();
 
-<!-- ══════════════════════════════════
-     COUNTDOWN — Dark Burgundy Bar
-══════════════════════════════════ -->
-<section class="countdown-sec">
-  <h3 class="cd-title">ТОЙ САЛТАНАТЫНА<br>ДЕЙІН:</h3>
-  <div class="cd-row">
-    <div class="cd-unit">
-      <span class="cd-num" id="days">43</span>
-      <span class="cd-lbl">КҮН</span>
-    </div>
-    <div class="cd-div">|</div>
-    <div class="cd-unit">
-      <span class="cd-num" id="hours">01</span>
-      <span class="cd-lbl">САҒАТ</span>
-    </div>
-    <div class="cd-div">|</div>
-    <div class="cd-unit">
-      <span class="cd-num" id="minutes">47</span>
-      <span class="cd-lbl">МИНУТ</span>
-    </div>
-    <div class="cd-div">|</div>
-    <div class="cd-unit">
-      <span class="cd-num" id="seconds">27</span>
-      <span class="cd-lbl">СЕКУНД</span>
-    </div>
-  </div>
-</section>
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
 
-<!-- ══════════════════════════════════
-     LOCATION — White
-══════════════════════════════════ -->
-<section class="location-sec">
-  <h2 class="script-title burg-clr">Мекенжайы:</h2>
-  <p class="caps-body loc-city">ҚЫЗЫЛОРДА ҚАЛАСЫ</p>
-  <h3 class="script-title venue-title">«Ақ Отау»</h3>
-  <p class="caps-body loc-type">МЕЙРАМХАНАСЫ</p>
-  <a href="https://go.2gis.com/P9HJH" target="_blank" rel="noopener" class="map-btn" id="map-btn">
-    <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <path d="M24 4C15.16 4 8 11.16 8 20c0 13 16 24 16 24s16-11 16-24c0-8.84-7.16-16-16-16z" fill="#34A853"/>
-      <circle cx="24" cy="20" r="16" fill="url(#gm)"/>
-      <circle cx="24" cy="20" r="7" fill="white"/>
-      <defs>
-        <radialGradient id="gm" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#EA4335"/>
-          <stop offset="35%" stop-color="#FBBC04"/>
-          <stop offset="65%" stop-color="#34A853"/>
-          <stop offset="100%" stop-color="#4285F4"/>
-        </radialGradient>
-      </defs>
-    </svg>
-    КАРТАНЫ АШУ
-  </a>
-</section>
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }, 1000);
 
-<!-- ══════════════════════════════════
-     HOSTS — White + Oval Photo
-══════════════════════════════════ -->
-<section class="hosts-sec">
-  <h2 class="script-title burg-clr">Той иелері:</h2>
-  <p class="caps-body hosts-names">ЖАНАР — МҰХТАР — САНЖАР</p>
+        // Guest Counter
+        let count = 1;
+        function updateCount(change) {
+            const newCount = count + change;
+            if (newCount >= 1 && newCount <= 10) {
+                count = newCount;
+                document.getElementById('guestCount').innerText = count;
+            }
+        }
 
-  <div class="oval-wrap hosts-oval">
-    <div class="oval-frame oval-hosts">
-      <img src="0fd5cf72822a5a3d2c79200358edb113.jpg" alt="Той суреті" />
-    </div>
-    <span class="odeco l">◆</span>
-    <span class="odeco r">◆</span>
-  </div>
-</section>
+        // Send to WhatsApp
+        function sendToWhatsApp() {
+            const name = document.getElementById('guestName').value.trim();
+            if (!name) {
+                alert('Өтініш, аты-жөніңізді жазыңыз.');
+                return;
+            }
 
+            let attendance = '';
+            const radios = document.getElementsByName('attendance');
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    attendance = radios[i].value;
+                    break;
+                }
+            }
 
-<!-- ══════════════════════════════════
-     CALENDAR — Torn Paper + Burgundy
-══════════════════════════════════ -->
-<section class="calendar-sec">
-  <!-- White top area -->
-  <div class="cal-white-top">
-    <!-- Torn wave divider -->
-    <div class="torn-up">
-      <svg viewBox="0 0 430 68" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,68 L0,30 C22,12 44,48 66,30 C88,12 110,50 132,30 C154,10 176,48 198,30 C220,10 242,48 264,30 C286,10 308,48 330,30 C352,10 374,48 396,30 C410,20 420,26 430,30 L430,68 Z" fill="#6B1020"/>
-      </svg>
-    </div>
-  </div>
+            const guestCount = document.getElementById('guestCount').innerText;
 
-  <!-- Burgundy bg with content -->
-  <div class="cal-burg">
-    <!-- Monogram with natural flowers -->
-    <div class="mono-wrap">
-      <img src="natural_flower.jpg?v=2" class="mono-flowers-img" alt="гүлдер" />
-      <span class="mono-letter">А</span>
-    </div>
+            let attendanceText = '';
+            if (attendance === 'yes') attendanceText = 'Келемін';
+            else if (attendance === 'with_spouse') attendanceText = 'Жұбайыммен келемін';
+            else if (attendance === 'no') attendanceText = 'Келе алмаймын';
 
-    <p class="cal-date-script">24 қазан 2026 жыл</p>
-    <p class="cal-time-script">сағат 12:00 - де</p>
+            let message = `Тойға жауап:\n\nАты-жөні: ${name}\nЖауабы: ${attendanceText}`;
+            if (attendance !== 'no') {
+                message += `\nАдам саны: ${guestCount}`;
+            }
 
-    <!-- Calendar grid -->
-    <div class="cal-widget">
-      <div class="cal-head-row">
-        <span>ДС</span><span>СС</span><span>СР</span><span>БС</span><span>ЖМ</span><span>СН</span><span>ЖС</span>
-      </div>
-      <div class="cal-grid-body" id="cal-grid"></div>
-    </div>
-  </div>
-</section>
+            const whatsappUrl = `https://wa.me/77773134764?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
 
+        // Music Player
+        const bgMusic = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicToggle');
+        let isMusicPlaying = false;
 
-<!-- ══════════════════════════════════
-     WHATSAPP RSVP
-══════════════════════════════════ -->
-<section class="rsvp-sec">
-  <h2 class="script-title burg-clr">Жауап беріңіз:</h2>
-  <p class="rsvp-desc">WhatsApp арқылы хабарлаңыз</p>
-  <div class="rsvp-btns">
-    <button class="btn-yes" id="btn-yes" onclick="sendWA('yes')">
-      <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16 2C8.28 2 2 8.28 2 16c0 2.46.65 4.77 1.79 6.77L2 30l7.44-1.95A13.9 13.9 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.4 11.4 0 01-5.83-1.6l-.42-.25-4.33 1.14 1.15-4.23-.28-.44A11.42 11.42 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.27-8.53c-.34-.17-2.03-.99-2.34-1.11-.31-.11-.54-.17-.77.18-.22.34-.88 1.1-1.08 1.33-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.55-.28-.67-.57-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.86 0 1.68 1.23 3.31 1.4 3.54.17.23 2.42 3.7 5.86 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.03-.83 2.32-1.63.29-.8.29-1.49.2-1.63-.08-.14-.3-.23-.64-.4z"/></svg>
-      КЕЛЕМІН!
-    </button>
-    <button class="btn-no" id="btn-no" onclick="sendWA('no')">
-      КЕЛЕ АЛМАЙМЫН
-    </button>
-  </div>
-  <p class="rsvp-note">* Батырманы басқанда WhatsApp ашылады</p>
-</section>
+        musicBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicBtn.style.animationPlayState = 'paused';
+            } else {
+                bgMusic.play().catch(err => console.log('Play blocked', err));
+                musicBtn.style.animationPlayState = 'running';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        });
 
-
-<!-- ══════════════════════════════════
-     FOOTER
-══════════════════════════════════ -->
-<footer class="footer">
-  <p class="footer-name">Аружан</p>
-  <p class="footer-ornament">✦ ♥ ✦</p>
-  <p class="footer-info">24 қазан 2026 • сағат 12:00</p>
-  <p class="footer-info">«Ақ Отау» мейрамханасы, Қызылорда</p>
-</footer>
-
-  <script src="script.js?v=2"></script>
+        // Autoplay on first click anywhere on the document
+        document.body.addEventListener('click', function() {
+            if (!isMusicPlaying) {
+                bgMusic.play().then(() => {
+                    isMusicPlaying = true;
+                    musicBtn.style.animationPlayState = 'running';
+                }).catch(err => console.log('Autoplay blocked', err));
+            }
+        }, { once: true });
+    </script>
 </body>
 </html>
